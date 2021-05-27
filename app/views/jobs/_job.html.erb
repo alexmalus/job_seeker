@@ -1,0 +1,32 @@
+<%= turbo_frame_tag dom_id(job) do %>
+  <div class="border w-3/4 mx-auto border-gray-400 rounded-lg md:p-4 bg-white sm:py-3 py-4 px-2 m-10">
+    <div class="m-2">
+      <div class="flex items-center">
+        <div>
+          <div class="text text-gray-700 text-sm hover:text-black">Author: <%= job.author %></div>
+          <div class="text-xs text-gray-600 hover:text-black">
+            Published: <%= job.published %>
+            | Last updated: <%= job.updated %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pl-12 md:pl-10 xs:pl-10">
+      <h2 class="text-2xl font-bold mb-2 hover:text-blue-600 leading-7">
+        <%= link_to job.title, job.url, target: "_blank", rel: "nofollow" %>
+      </h2>
+      <div class="mb-2">
+        <% job.categories.each do |cat| %>
+          <%= button_tag(type: 'button', class: "text-sm text-gray-600 p-1 hover:text-black") do %>
+            <%= content_tag(:span, '#', class: 'text-opacity-50') %>
+            <%= cat %>
+          <% end %>
+      <% end %>
+      </div>
+      <div class="mb-1 leading-6">
+        <%#= Ref: https://api.rubyonrails.org/classes/ActionView/Helpers/SanitizeHelper.html#method-i-sanitize %>
+        <%= sanitize(job.summary.truncate(1000)) %>
+      </div>
+    </div>
+  </div>
+<% end %>

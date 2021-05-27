@@ -1,0 +1,89 @@
+version: '2.4'
+
+x-app: &app
+  build:
+    context: .
+    dockerfile: ./.dockerdev/Dockerfile
+    args:
+      RUBY_VERSION: '3.0.0'
+      NODE_MAJOR: '14'
+      YARN_VERSION: '1.13.0'
+      BUNDLER_VERSION: '2.2.3'
+  environment: &env
+    NODE_ENV: development
+    RAILS_ENV: ${RAILS_ENV:-development}
+  image: job-seeker-demo-dev:1.0.0
+  tmpfs:
+    - /tmp
+
+x-backend: &backend
+  <<: *app
+  stdin_open: true
+  tty: true
+  volumes:
+    - .:/app:cached
+    - rails_cache:/app/tmp/cache
+    - bundle:/usr/local/bundle
+    - node_modules:/app/node_modules
+    - packs:/app/public/packs
+    - packs-test:/app/public/packs-test
+    - .dockerdev/.bashrc:/root/.bashrc:ro
+    - .dockerdev/.pryrc:/root/.pryrc:ro
+  environment: &backend_environment
+    <<: *env
+    REDIS_URL: redis://redis:6379/
+    BOOTSNAP_CACHE_DIR: /usr/local/bundle/_bootsnap
+    WEBPACKER_DEV_SERVER_HOST: webpacker
+    WEB_CONCURRENCY: 1
+    EDITOR: vi
+    LOG: ${LOG:-0}
+  depends_on: &backend_depends_on
+    redis:
+      condition: service_healthy
+
+services:
+  rails:
+    <<: *backend
+    command: bundle exec rails server -b 0.0.0.0
+    ports:
+      - '3000:3000'
+
+  sidekiq:
+    <<: *backend
+    command: bundle exec sidekiq
+
+  redis:
+    image: redis:5.0-alpine
+    volumes:
+      - redis:/data
+    ports:
+      - 6379
+    healthcheck:
+      test: redis-cli ping
+      interval: 1s
+      timeout: 3s
+      retries: 30
+
+  webpacker:
+    <<: *app
+    command: bundle exec ./bin/webpack-dev-server
+    ports:
+      - '3035:3035'
+      - 3036
+    volumes:
+      - .:/app:cached
+      - bundle:/usr/local/bundle
+      - node_modules:/app/node_modules
+      - packs:/app/public/packs
+      - packs-test:/app/public/packs-test
+    environment:
+      <<: *env
+      WEBPACKER_DEV_SERVER_HOST: 0.0.0.0
+
+volumes:
+  redis:
+  bundle:
+  node_modules:
+  rails_cache:
+  packs:
+  packs-test:

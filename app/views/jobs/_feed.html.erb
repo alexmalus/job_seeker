@@ -1,0 +1,11 @@
+<%= turbo_stream_from :feed %>
+
+<% if lazy_load %>
+  <%= turbo_frame_tag :feed, src: jobs_initial_load_path do %>
+    <%= render partial: "jobs/placeholder_jobs", locals: { display_loading: true } %>
+  <% end %>
+<% else %>
+  <%= turbo_frame_tag :feed do %>
+    <%= render partial: "jobs/placeholder_jobs", locals: { display_loading: false } %>
+  <% end %>
+<% end %>

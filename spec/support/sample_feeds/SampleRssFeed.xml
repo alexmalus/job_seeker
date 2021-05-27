@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:a10="http://www.w3.org/2005/Atom" version="2.0">
+  <channel xmlns:os="http://a9.com/-/spec/opensearch/1.1/">
+    <title>jobs in Munich, Deutschland - Stack Overflow</title>
+    <link>https://stackoverflow.com/jobs</link>
+    <description>jobs in Munich, Deutschland - Stack Overflow</description>
+    <image>
+      <url>http://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d</url>
+      <title>jobs in Munich, Deutschland - Stack Overflow</title>
+      <link>https://stackoverflow.com/jobs</link>
+    </image>
+    <os:totalResults>263</os:totalResults>
+    <item>
+      <guid isPermaLink="false">523915</guid>
+      <link>https://stackoverflow.com/jobs/523915/fullstack-software-developer-m-f-d-python-at-hubert-burda-media?a=2PHHpzo2yN3O&amp;so_medium=Talent&amp;so_source=TalentApi</link>
+      <a10:author>
+        <a10:name>Hubert Burda Media</a10:name>
+      </a10:author>
+      <category>python</category>
+      <category>django</category>
+      <category>sass</category>
+      <category>javascript</category>
+      <category>xss</category>
+      <title>Fullstack Software Developer (m/f/d) Python at Netdoktor at Hubert Burda Media (München, Deutschland)</title>
+      <description>&lt;p&gt;&lt;strong&gt;Fullstack Software Developer (m/f/d) Python at Netdoktor&lt;/strong&gt;&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;strong&gt;What you can expect from us ...&lt;/strong&gt;&lt;/p&gt;&lt;br /&gt;&lt;ul&gt;&lt;br /&gt;&lt;li&gt;We work as a self-organizing scrum team&lt;/li&gt;&lt;br /&gt;&lt;li&gt;You develop new product features together in a team and in close cooperation with the product management team as well as other departments&lt;/li&gt;&lt;br /&gt;&lt;li&gt;You have a significant impact on the system and software architecture and enable us to further scale traffic and the amount of data&lt;/li&gt;&lt;br /&gt;&lt;li&gt;We work with the Atlassian stack (Jira, Bitbucket, Bamboo)&lt;/li&gt;&lt;br /&gt;&lt;li&gt;We use the best tools and technologies for the respective task, e.g. Python, Django, Django CMS, Docker, uWSGI, PostgreSQL, MySQL, Redis, Sass, TypeScript, Webpack, NPM, Polymer 3, Web Components&lt;/li&gt;&lt;br /&gt;&lt;/ul&gt;&lt;br /&gt;&lt;p&gt;&lt;strong&gt;What we can offer you ...&lt;/strong&gt;&lt;/p&gt;&lt;br /&gt;&lt;ul&gt;&lt;br /&gt;&lt;li&gt;We are a dynamic and enthusiastic team in which you have the opportunity to share your own ideas in exciting projects and actively be part of creating products&lt;/li&gt;&lt;br /&gt;&lt;li&gt;As a 100 % subsidiary of Hubert Burda Media, you profit from the benefits of a modern company&lt;/li&gt;&lt;br /&gt;&lt;li&gt;You will find flexible working hours, free coffee and beverages and lots of healthy fruit&lt;/li&gt;&lt;br /&gt;&lt;li&gt;We&amp;rsquo;re located in the heart of Munich, easily accessible by public transport&lt;/li&gt;&lt;br /&gt;&lt;/ul&gt;&lt;br /&gt;&lt;p&gt;&lt;strong&gt;What we would expect from you ...&lt;/strong&gt;&lt;/p&gt;&lt;br /&gt;&lt;ul&gt;&lt;br /&gt;&lt;li&gt;At least five years of project experience in the development of web systems in a python environment among others&lt;/li&gt;&lt;br /&gt;&lt;li&gt;Experience in various frameworks, setup and testing&lt;/li&gt;&lt;br /&gt;&lt;li&gt;Technical know-how in web, e.g. Cache systems or performance, databases, SOA via REST or RPC, Security Related Issues (XSS, SQL Injections etc.), Sass, TypeScript, JavaScript, CSS3, HTML5, Web Components&lt;/li&gt;&lt;br /&gt;&lt;li&gt;Affinity to sustainability in software projects: The core principles of clean code, documentation, reviews and design, traceability by structured implementation, TDD or Pair programming&lt;/li&gt;&lt;br /&gt;&lt;/ul&gt;&lt;br /&gt;&lt;p&gt;&lt;strong&gt;&lt;a href="https://career5.successfactors.eu/career?company=burda&amp;amp;career_job_req_id=1555&amp;amp;career_ns=job_application" rel="nofollow"&gt;Apply now&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;&lt;br /&gt;&lt;p&gt;&lt;strong&gt;Contact&lt;/strong&gt;&lt;br&gt; Marius Detmar&lt;br&gt; Recruiting Center&lt;br&gt; &lt;a rel="nofollow"&gt;bewerbung@burda.com&lt;/a&gt;&lt;br&gt; &lt;a href="https://www.burda.com/de/" rel="nofollow"&gt;www.burda.de&lt;/a&gt;&lt;/p&gt;</description>
+      <pubDate>Thu, 13 May 2021 14:21:20 Z</pubDate>
+      <a10:updated>2021-05-13T14:21:20Z</a10:updated>
+      <location xmlns="http://stackoverflow.com/jobs/">München, Deutschland</location>
+    </item>
+  </channel>
+</rss>
